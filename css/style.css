@@ -1,0 +1,41 @@
+.container {
+    max-width: 1348px;
+    margin: auto;
+}
+
+.main-swiper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.swiper-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.swiper-buttons-wrap {
+    display: flex;
+    gap: 8px;
+}
+
+.swiper {
+    max-width: 100%;
+    height: auto;
+}
+/* 
+.swiper-button-nextt {
+    position: absolute;
+    top: 0;
+    right: 92px;
+}
+
+.swiper-button-prevv {
+    position: absolute;
+    top: 0;
+    right: 122px;
+} */
