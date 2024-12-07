@@ -19,13 +19,13 @@
                 <div class="nav">
                     <img src="./img/logo.png" alt="" class="nav__logo">
                     <div class="nav__options nav">
-                        <div class="options">Pricing</div>
-                        <div class="options">Use Cases</div>
-                        <div class="options">Book a Demo</div>
+                        <a href="#" class="options">Pricing</a>
+                        <a href="#" class="options">Use Cases</a>
+                        <a href="#" class="options">Book a Demo</a>
                     </div>
                     <div class="nav__reg nav">
                         <button type="submit" class="reg__sing">Sing In</button>
-                        <button type="submit" class="reg__btn">Contact sales</button>
+                        <button type="submit" class="reg__btn modal__btn">Contact sales</button>
                     </div>
                 </div>
             </div>
@@ -103,12 +103,62 @@
             </div>
         </main>
         <footer class="footer container">
-            <button class="footer-btn">Boost my website conversion</button>
+            <button class="footer-btn modal__btn">Boost my website conversion</button>
             <p class="footer-text">So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your website users’ behavior patterns and needs.</p>
+            <div class="modal__window none">
+                <div class="modal__close">
+                    <i class="fa-solid fa-times"></i>
+                </div>
+                <div class="modal__content">
+                    <div class="modal__img">
+                        <img src="img/modal/modal.png" alt="">
+                    </div>
+                    <div class="modal__padding">
+                        <div class="modal__text">
+                            <h2 class="modal__title">How to do a Website Audit to Improve SEO & Conversions</h2>
+                            <p class="modal__subtitle">You will get an SMS with a link to the webinar</p>
+                            <form enctype="multipart/form-data" class="modal__form">
+                                <div class="modal__info">
+                                    <p class="modal__name">Name</p>
+                                    <input type="text" placeholder="Boris Johnson" class="modal__input" id="name">
+                                    <p class="text__error" id="name-error"></p>
+                                </div>
+                                <div class="modal__info">
+                                    <p class="modal__phone">Number</p>
+                                    <div class="modal__select" id="select">
+                                        <select name="select" id="select" class="select__country">
+                                            <option value="+380">🇺🇦 +380</option>
+                                            <option value="+48">🇵🇱 +48</option>
+                                            <option value="+420">🇨🇿 +420</option>
+                                            <option value="+1">🇺🇸 +1</option>
+                                            <option value="+44">🇬🇧 +44</option>
+                                        </select>
+                                        <input type="number" class="modal__number" placeholder='XX XXX XXXX' id="phone">
+                                    </div>
+                                    <p class="text__error" id="phone-error"></p>
+                                </div>                                
+                                <div class="modal__button">
+                                    <button type="button" class="btn support__btn">Support</button>
+                                    <button type="submit" class="btn submit__btn">Contact sales</button>
+                                </div>
+                            </form>
+                            <div class="modal__footer">
+                                <input type="radio">
+                                <p class="modal__p">By sending up? You agree to our <a href="#">Conditions</a> and <a href="#">Privacy Policy</a></p>
+                            </div>
+                        </div>
+                        <div class="modal_powered">
+                            <img src="img/modal/miniLogo.svg" alt="">
+                            <p class="powered__p">Powered by <span>Plerdy</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+    </script>
 </body>
 </html>
