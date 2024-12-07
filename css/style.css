@@ -150,6 +150,9 @@ b {
 
 }
 
+/* animation  */
+
+
 .animation {
   image-rendering: crisp-edges;
   backface-visibility: hidden;
