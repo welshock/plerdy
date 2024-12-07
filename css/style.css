@@ -5,10 +5,21 @@
   margin: auto;
   margin-top: 10px;
 }
-
+header {
+  position: fixed;
+  z-index: 2;
+  left: 12%;
+  top: 0;
+  width: 1440px;
+  padding: 15px;
+  height: 77px;
+  background: white;
+  border-bottom: #7e7e7e;
+}
 .nav {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap ;
   gap: 100px;
   align-items: center;
 }
@@ -35,7 +46,7 @@
   color: rgba(93, 120, 255, 1);
   transition: 0.3s ease;
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .reg__sing:hover {
@@ -65,7 +76,7 @@
 }
 
 hr {
-  margin-top: 20px;
+  margin-top: 80px;
   color: #7e7e7e;
 }
 
