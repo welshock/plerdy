@@ -149,6 +149,7 @@ b {
   position: relative;
 
 }
+
 .animation {
   image-rendering: crisp-edges;
   backface-visibility: hidden;
