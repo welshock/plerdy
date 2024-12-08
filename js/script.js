@@ -1,65 +1,61 @@
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
-    // Navigation arrows
     navigation: {
-    nextEl: '.swiper-button-nextt',
-    prevEl: '.swiper-button-prevv',
+        nextEl: '.swiper-button-nextt',
+        prevEl: '.swiper-button-prevv',
     },
     grabCursor: true,
-
     slidesPerView: 3.3,
     spaceBetween: 17,
     breakpoints: {
-    1000: {
-        slidesPerView: 3.3,
-    },
-    
-    768: {
-    slidesPerView: 2.3,
-    },
-    484: {
-        slidesPerView: 2,
-    },
-    280: {
-        slidesPerView: 1.2,
-    },
-    100: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-    },
+        1000: {
+            slidesPerView: 3.3,
+        },
+        768: {
+            slidesPerView: 2.3,
+        },
+        484: {
+            slidesPerView: 2,
+        },
+        280: {
+            slidesPerView: 1.2,
+        },
+        100: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
     },
     pagination: {
         el: '.swiper-pagination',
     },
-    
 });
 
-const showModal = document.querySelectorAll('.modal__btn');
+// Модальне вікно
+const showModalButtons = document.querySelectorAll('.modal__btn');
 const modalWindow = document.querySelector('.modal__window');
-const closeModal = document.querySelector('.modal__close');
+const closeModalButton = document.querySelector('.modal__close');
+const form = document.querySelector('.modal__form');
 
-const showModalFunc = () => {
-    showModal.forEach(button => {
-        button.addEventListener('click', () => {
-            modalWindow.classList.remove('none');
-        });
+showModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        modalWindow.classList.remove('none');
     });
+});
 
-    closeModal.addEventListener('click', () => {
-        modalWindow.classList.add('none');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!modalWindow.contains(event.target) && !event.target.closest('.modal__btn')) {
-            modalWindow.classList.add('none');
-        }
-    });
+const closeModalFunc = () => {
+    modalWindow.classList.add('none');
+    form.reset();
 };
 
-showModalFunc();
+// Обробник закриття по кнопці
+closeModalButton.addEventListener('click', closeModalFunc);
 
+document.addEventListener('click', (event) => {
+    if (!modalWindow.contains(event.target) && !event.target.closest('.modal__btn')) {
+        closeModalFunc();
+    }
+});
 
 function validateForm() {
     let hasError = false;
@@ -78,7 +74,7 @@ function validateForm() {
         hasError = true;
     } else {
         nameInput.classList.remove('error__border');
-        nameError.textContent = ''
+        nameError.textContent = '';
     }
 
     if (phone === '') {
@@ -87,13 +83,16 @@ function validateForm() {
         hasError = true;
     } else {
         select.classList.remove('error__border');
-        phoneError.textContent = ''
+        phoneError.textContent = '';
     }
 
     const phonePattern = /^[0-9]{2,3}[ ]?[0-9]{3}[ ]?[0-9]{3,4}$/;
     if (!phone || !phonePattern.test(phone)) {
         phoneInput.classList.add('error__border');
+        phoneError.textContent = 'Invalid phone number format';
         hasError = true;
+    } else {
+        phoneInput.classList.remove('error__border');
     }
 
     return !hasError;
@@ -103,6 +102,6 @@ const submitButton = document.querySelector('.submit__btn');
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     if (validateForm()) {
-        modalWindow.classList.add('none')
+        closeModalFunc();
     }
 });
