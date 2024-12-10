@@ -114,8 +114,16 @@ const signBtn = document.querySelector('.burger__reg_sing')
 const regBtn =document.querySelector('.burger__reg_btn')
 
 burgerBtn.addEventListener('click', ()=> {
+<<<<<<< HEAD
     navOptions.classList.toggle('none')
     signBtn.classList.toggle('none')
     regBtn.classList.toggle('none')
+=======
+    navOptions.classList.toggle('act')
+    signBtn.classList.toggle('none')
+    regBtn.classList.toggle('none')
+})
+burgerBtn.addEventListener('click', ()=> {
+>>>>>>> aeccb72 (last)
     burgerBtn.classList.toggle('active')
 })
