@@ -192,7 +192,7 @@ header {
   }
   
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .main-content {
     align-items: center;
   }
