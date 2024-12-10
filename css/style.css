@@ -92,20 +92,6 @@ header {
 .burger__btn {
   display: none;
 }
-<<<<<<< HEAD
-.burger__options {
-  position: fixed;
-  top: 80px;
-  left: 0%;
-  width: 80%;
-  max-width: 300px;
-  height: 100vh;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: left 0.3s ease;
-}
-=======
 
 hr {
   color: rgba(229, 229, 229, 1);
@@ -127,7 +113,6 @@ hr {
   }
 }
 
->>>>>>> aeccb72 (last)
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
@@ -175,20 +160,11 @@ hr {
   .burger__options {
     position: fixed;
     top: 80px;
-<<<<<<< HEAD
-    left: 0%;
-=======
     left: -100%;
->>>>>>> aeccb72 (last)
     width: 80%;
     max-width: 300px;
     height: 100vh;
     background-color: #ffffff;
-<<<<<<< HEAD
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: 0.3s ease;
-=======
     padding: 20px;
     transition: left 0.3s ease, opacity 0.3s ease;
     opacity: 0;
@@ -197,7 +173,6 @@ hr {
   .burger__options.act {
     left: 0;
     opacity: 1; 
->>>>>>> aeccb72 (last)
   }
   .burger__reg_sing {
     font-size: 18px;
@@ -234,12 +209,9 @@ hr {
 @media screen and (max-width: 426px) {
   .main-content {
     align-items: center;
-<<<<<<< HEAD
-=======
     padding: 15px;
     padding-left: 0;
     margin: 0;
->>>>>>> aeccb72 (last)
   }
   .burger__menu {
     display: block;
