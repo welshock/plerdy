@@ -1,23 +1,22 @@
 /* NAV styles */
+/* Тарас Шевченко ↓ */
 
-.container__nav {
-  max-width: 100%;
-  margin: auto;
-  margin-top: 10px;
-}
 header {
   position: fixed;
   z-index: 2;
   top: 0;
   width: 100%;
+  margin: auto;
   padding: 15px;
-  background: white;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px #0000002f;
 }
+
 .nav {
+  max-width: 1256px;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap ;
-  gap: 290px;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -27,6 +26,7 @@ header {
 }
 
 .nav__options {
+  display: flex;
   gap: 30px;
   color: rgba(125, 125, 125, 1);
   font-weight: 500;
@@ -44,6 +44,7 @@ header {
 }
 
 .nav__reg {
+  display: flex;
   gap: 30px;
 }
 
@@ -83,15 +84,10 @@ header {
   margin: auto;
 }
 
-hr {
-  color: rgba(229, 229, 229, 1);
-  border-bottom: 1px solid;
-  margin-top: 80px; 
-}
-
 /* burger__menu */
 .burger__menu {
   display: none;
+  z-index: 11;
 }
 .burger__btn {
   display: none;
@@ -372,6 +368,8 @@ b {
   animation-delay: 0.6s;
 }
 
+/* Тарас Козак  ↓*/
+
 .main-swiper {
   margin-top: 100px;
   display: flex;
@@ -542,7 +540,6 @@ b {
 
 .modal__window {
   position: relative;
-  /* position: absolute; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -550,7 +547,7 @@ b {
   width: 800px;
   height: 550px;
   background-color: #fff;
-  z-index: 10;
+  z-index: 12;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);

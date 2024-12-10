@@ -117,7 +117,5 @@ burgerBtn.addEventListener('click', ()=> {
     navOptions.classList.toggle('none')
     signBtn.classList.toggle('none')
     regBtn.classList.toggle('none')
-})
-burgerBtn.addEventListener('click', ()=> {
     burgerBtn.classList.toggle('active')
 })
